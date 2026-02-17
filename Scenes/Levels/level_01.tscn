@@ -21,6 +21,7 @@ glow_enabled = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1152377441]
 transform = Transform3D(-0.78477633, 0.2291613, -0.575857, 0, 0.9291326, 0.36974674, 0.6197791, 0.2901685, -0.72916126, 0, 0, 0)
+visible = false
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=236042174]
@@ -41,79 +42,9 @@ size = Vector3(60.5, 32, 5)
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 36, 0, 0)
 size = Vector3(60.5, 32, 5)
 
-[node name="Node" type="Node" parent="CSGCombiner3D" unique_id=676960500]
-
-[node name="BWall1" type="CSGBox3D" parent="CSGCombiner3D/Node" unique_id=817998229]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, 15)
-size = Vector3(20, 10, 1)
-
-[node name="BWall2" type="CSGBox3D" parent="CSGCombiner3D/Node" unique_id=2003846459]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 16, 0, 5.271)
-size = Vector3(20.5, 10, 1)
-
-[node name="DoorwayBottom2" type="CSGBox3D" parent="CSGCombiner3D/Node/BWall2" unique_id=1899966635]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0.2709999)
-operation = 2
-size = Vector3(2, 6, 2)
-
-[node name="BWall3" type="CSGBox3D" parent="CSGCombiner3D/Node" unique_id=389909914]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.958427, 0, -4.4746556)
-size = Vector3(20, 10, 1)
-
-[node name="BWall4" type="CSGBox3D" parent="CSGCombiner3D/Node" unique_id=842585571]
-transform = Transform3D(0.9659258, -0.25881904, 0, 0.25881904, 0.9659258, 0, 0, 0, 1, 26.958427, 3, -4.4746556)
-size = Vector3(20, 10, 1)
-
-[node name="BWall5" type="CSGBox3D" parent="CSGCombiner3D/Node" unique_id=791923667]
-transform = Transform3D(0.9659258, -0.25881904, 0, 0.25881904, 0.9659258, 0, 0, 0, 1, 26.958, 3, 15)
-size = Vector3(20, 10, 1)
-
-[node name="BRoof" type="CSGBox3D" parent="CSGCombiner3D/Node" unique_id=470524879]
-transform = Transform3D(-1.1313336e-08, 0.9659258, 0.25881898, 4.222196e-08, 0.25881898, -0.9659258, -1, 0, -4.371139e-08, 24.787628, 7.294095, 5.271)
-size = Vector3(22, 20, 1)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/Node" unique_id=1690835636]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 1.2821617, 6)
-size = Vector3(3, 2.5, 6)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="CSGCombiner3D/Node" unique_id=240401690]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 3, 6)
-light_energy = 7.0
-light_indirect_energy = 7.0
-shadow_enabled = true
-omni_attenuation = 10.0
-
-[node name="Wall4" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1241078054]
+[node name="Wall3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1241078054]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -36, 0, 0)
 size = Vector3(60.5, 32, 5)
-
-[node name="Turret1" type="CSGPolygon3D" parent="CSGCombiner3D" unique_id=880702030]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 36, 0, -36)
-polygon = PackedVector2Array(5, 0, 5, 20, 6, 20, 6, 0)
-mode = 1
-spin_degrees = 360.0
-spin_sides = 16
-
-[node name="Turret2" type="CSGPolygon3D" parent="CSGCombiner3D" unique_id=624365656]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -36, 0, -36)
-polygon = PackedVector2Array(5, 0, 5, 20, 6, 20, 6, 0)
-mode = 1
-spin_degrees = 360.0
-spin_sides = 16
-
-[node name="Turret3" type="CSGPolygon3D" parent="CSGCombiner3D" unique_id=378393625]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -36, 0, 36)
-polygon = PackedVector2Array(5, 0, 5, 20, 6, 20, 6, 0)
-mode = 1
-spin_degrees = 360.0
-spin_sides = 16
-
-[node name="Turret4" type="CSGPolygon3D" parent="CSGCombiner3D" unique_id=1315983862]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 36, -2, 36)
-polygon = PackedVector2Array(5, 0, 5, 20, 6, 20, 6, 0)
-mode = 1
-spin_degrees = 360.0
-spin_sides = 16
 
 [node name="GateWall" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1321127282]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -36)
@@ -125,9 +56,140 @@ operation = 2
 size = Vector3(1, 1.2110596, 1)
 
 [node name="DoorwayArch" type="CSGCylinder3D" parent="CSGCombiner3D/GateWall" unique_id=87472868]
-transform = Transform3D(10, 0, 0, 0, 0.6592563, 9.978246, 0, -9.978246, 0.6592563, 0, 7.005765, 0)
+transform = Transform3D(10, 0, 0, 0, 0.65925634, 9.978246, 0, -9.978246, 0.65925634, 0, 7.005765, 0)
 operation = 2
 sides = 24
+
+[node name="Building" type="Node" parent="CSGCombiner3D" unique_id=676960500]
+
+[node name="BWall1" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=817998229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, 15)
+use_collision = true
+size = Vector3(20, 10, 1)
+
+[node name="BWall2" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=2003846459]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 16, 0, 5.271)
+use_collision = true
+size = Vector3(20.5, 10, 1)
+
+[node name="Doorway" type="CSGBox3D" parent="CSGCombiner3D/Building/BWall2" unique_id=1899966635]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0.2709999)
+operation = 2
+size = Vector3(2, 6, 2)
+
+[node name="BWall3" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=389909914]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.958427, 0, -4.4746556)
+use_collision = true
+size = Vector3(20, 10, 1)
+
+[node name="BWall4" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=842585571]
+transform = Transform3D(0.9659258, -0.25881904, 0, 0.25881904, 0.9659258, 0, 0, 0, 1, 26.958427, 3, -4.4746556)
+use_collision = true
+size = Vector3(20, 10, 1)
+
+[node name="BWall5" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=791923667]
+transform = Transform3D(0.9659258, -0.25881904, 0, 0.25881904, 0.9659258, 0, 0, 0, 1, 26.958, 3, 15)
+use_collision = true
+size = Vector3(20, 10, 1)
+
+[node name="BCeiling" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=406614302]
+transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, 26.772705, 6, 5)
+use_collision = true
+size = Vector3(20, 13.557129, 1)
+
+[node name="BRoof" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=470524879]
+transform = Transform3D(-1.1313336e-08, 0.9659258, 0.25881898, 4.222196e-08, 0.25881898, -0.9659258, -1, 0, -4.371139e-08, 24.390032, 7.1875596, 5.271)
+use_collision = true
+size = Vector3(22, 20.823242, 1)
+
+[node name="Table" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=1690835636]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0.6217003, 7)
+use_collision = true
+size = Vector3(3, 1.1790771, 6)
+
+[node name="Table2" type="CSGCylinder3D" parent="CSGCombiner3D/Building" unique_id=1470433580]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0.32366562, 1)
+use_collision = true
+radius = 2.0
+height = 1.2329102
+sides = 16
+
+[node name="Bookshelf" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=757688329]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 28.729136, 2.058712, -3)
+use_collision = true
+size = Vector3(3, 1.3500977, 4.703003)
+
+[node name="Bookshelf2" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=722517972]
+transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, 33, 2.0367393, 1.3104184)
+use_collision = true
+size = Vector3(3, 1.3500977, 4.6590576)
+
+[node name="Bookshelf3" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=1706588180]
+transform = Transform3D(0.7071067, 0.7071068, 3.090862e-08, 0, -4.371139e-08, 1, 0.7071068, -0.7071067, -3.090862e-08, 32, 2.1373863, -2)
+use_collision = true
+size = Vector3(3, 1.3500977, 4.8603516)
+
+[node name="Candle" type="OmniLight3D" parent="CSGCombiner3D/Building" unique_id=240401690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 1.7189987, 7)
+light_color = Color(0.8522109, 0.58098006, 0, 1)
+light_energy = 5.0
+light_indirect_energy = 5.0
+shadow_enabled = true
+omni_range = 4.0
+
+[node name="Candle2" type="OmniLight3D" parent="CSGCombiner3D/Building" unique_id=648565619]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 1.6789603, 1)
+light_color = Color(0.8522109, 0.58098006, 0, 1)
+light_energy = 5.0
+light_indirect_energy = 5.0
+shadow_enabled = true
+omni_range = 4.0
+
+[node name="Lantern1" type="OmniLight3D" parent="CSGCombiner3D/Building" unique_id=206256854]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.642239, 3.480163, -5.448287)
+light_color = Color(0.8522109, 0.58098006, 0, 1)
+light_energy = 5.0
+light_indirect_energy = 5.0
+shadow_enabled = true
+omni_range = 4.0
+
+[node name="Lantern2" type="OmniLight3D" parent="CSGCombiner3D/Building" unique_id=1042518191]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.642239, 3.480163, 15.923875)
+light_color = Color(0.8522109, 0.58098006, 0, 1)
+light_energy = 5.0
+light_indirect_energy = 5.0
+shadow_enabled = true
+omni_range = 4.0
+
+[node name="Turrets" type="Node" parent="CSGCombiner3D" unique_id=1804381612]
+
+[node name="Turret1" type="CSGPolygon3D" parent="CSGCombiner3D/Turrets" unique_id=880702030]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 36, 0, -36)
+polygon = PackedVector2Array(5, 0, 5, 20, 6, 20, 6, 0)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 16
+
+[node name="Turret2" type="CSGPolygon3D" parent="CSGCombiner3D/Turrets" unique_id=624365656]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -36, 0, -36)
+polygon = PackedVector2Array(5, 0, 5, 20, 6, 20, 6, 0)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 16
+
+[node name="Turret3" type="CSGPolygon3D" parent="CSGCombiner3D/Turrets" unique_id=378393625]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -36, 0, 36)
+polygon = PackedVector2Array(5, 0, 5, 20, 6, 20, 6, 0)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 16
+
+[node name="Turret4" type="CSGPolygon3D" parent="CSGCombiner3D/Turrets" unique_id=1315983862]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 36, -2, 36)
+polygon = PackedVector2Array(5, 0, 5, 20, 6, 20, 6, 0)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 16
 
 [node name="ProtoController" parent="." unique_id=1455429052 instance=ExtResource("1_l0dwn")]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0.11, -46)
