@@ -36,15 +36,15 @@ size = Vector3(100, 1, 108.17)
 
 [node name="Wall" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1725280957]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 36)
-size = Vector3(60.5, 32, 5)
+size = Vector3(61.5, 32, 5)
 
 [node name="Wall2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=564652975]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 36, 0, 0)
-size = Vector3(60.5, 32, 5)
+size = Vector3(61.5, 32, 5)
 
 [node name="Wall3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1241078054]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -36, 0, 0)
-size = Vector3(60.5, 32, 5)
+size = Vector3(61.5, 32, 5)
 
 [node name="GateWall" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1321127282]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -36)
@@ -165,31 +165,87 @@ omni_range = 4.0
 
 [node name="Turret1" type="CSGPolygon3D" parent="CSGCombiner3D/Turrets" unique_id=880702030]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 36, 0, -36)
+use_collision = true
 polygon = PackedVector2Array(5, 0, 5, 20, 6, 20, 6, 0)
 mode = 1
 spin_degrees = 360.0
 spin_sides = 16
+
+[node name="Platform1" type="CSGTorus3D" parent="CSGCombiner3D/Turrets/Turret1" unique_id=1411900140]
+transform = Transform3D(1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 16, 0)
+inner_radius = 5.0
+outer_radius = 9.0
+sides = 16
+
+[node name="Cone1" type="CSGCylinder3D" parent="CSGCombiner3D/Turrets/Turret1" unique_id=1539805325]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22, 0)
+radius = 7.5
+height = 5.0
+sides = 16
+cone = true
 
 [node name="Turret2" type="CSGPolygon3D" parent="CSGCombiner3D/Turrets" unique_id=624365656]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -36, 0, -36)
+use_collision = true
 polygon = PackedVector2Array(5, 0, 5, 20, 6, 20, 6, 0)
 mode = 1
 spin_degrees = 360.0
 spin_sides = 16
+
+[node name="Platform2" type="CSGTorus3D" parent="CSGCombiner3D/Turrets/Turret2" unique_id=1435103566]
+transform = Transform3D(1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 16, 0)
+inner_radius = 5.0
+outer_radius = 9.0
+sides = 16
+
+[node name="Cone2" type="CSGCylinder3D" parent="CSGCombiner3D/Turrets/Turret2" unique_id=272795338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22, 0)
+radius = 7.5
+height = 5.0
+sides = 16
+cone = true
 
 [node name="Turret3" type="CSGPolygon3D" parent="CSGCombiner3D/Turrets" unique_id=378393625]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -36, 0, 36)
+use_collision = true
 polygon = PackedVector2Array(5, 0, 5, 20, 6, 20, 6, 0)
 mode = 1
 spin_degrees = 360.0
 spin_sides = 16
 
+[node name="Platform3" type="CSGTorus3D" parent="CSGCombiner3D/Turrets/Turret3" unique_id=1292655719]
+transform = Transform3D(1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 16, 0)
+inner_radius = 5.0
+outer_radius = 9.0
+sides = 16
+
+[node name="Cone3" type="CSGCylinder3D" parent="CSGCombiner3D/Turrets/Turret3" unique_id=720458237]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22, 0)
+radius = 7.5
+height = 5.0
+sides = 16
+cone = true
+
 [node name="Turret4" type="CSGPolygon3D" parent="CSGCombiner3D/Turrets" unique_id=1315983862]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 36, -2, 36)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 36, 0, 36)
+use_collision = true
 polygon = PackedVector2Array(5, 0, 5, 20, 6, 20, 6, 0)
 mode = 1
 spin_degrees = 360.0
 spin_sides = 16
+
+[node name="Platform4" type="CSGTorus3D" parent="CSGCombiner3D/Turrets/Turret4" unique_id=25899275]
+transform = Transform3D(1, 0, 0, 0, 0.1, 0, 0, 0, 1, 3.8146973e-06, 16, 0)
+inner_radius = 5.0
+outer_radius = 9.0
+sides = 16
+
+[node name="Cone4" type="CSGCylinder3D" parent="CSGCombiner3D/Turrets/Turret4" unique_id=1492057151]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8146973e-06, 22, 0)
+radius = 7.5
+height = 5.0
+sides = 16
+cone = true
 
 [node name="ProtoController" parent="." unique_id=1455429052 instance=ExtResource("1_l0dwn")]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0.11, -46)
