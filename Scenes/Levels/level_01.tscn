@@ -77,6 +77,16 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0
 operation = 2
 size = Vector3(2, 6, 2)
 
+[node name="Window1" type="CSGBox3D" parent="CSGCombiner3D/Building/BWall2" unique_id=1248482232]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2.4368992, 0)
+operation = 2
+size = Vector3(2.5, 2, 1.5)
+
+[node name="Window2" type="CSGBox3D" parent="CSGCombiner3D/Building/BWall2" unique_id=1541043750]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9999995, 2.4368992, 0)
+operation = 2
+size = Vector3(2.5, 2, 1.5)
+
 [node name="BWall3" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=389909914]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.958427, 0, -4.4746556)
 use_collision = true
@@ -145,16 +155,16 @@ light_indirect_energy = 5.0
 shadow_enabled = true
 omni_range = 4.0
 
-[node name="Lantern1" type="OmniLight3D" parent="CSGCombiner3D/Building" unique_id=206256854]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.642239, 3.480163, -5.448287)
+[node name="Torch1" type="OmniLight3D" parent="CSGCombiner3D/Building" unique_id=206256854]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.642239, 3.480163, 2.929863)
 light_color = Color(0.8522109, 0.58098006, 0, 1)
 light_energy = 5.0
 light_indirect_energy = 5.0
 shadow_enabled = true
 omni_range = 4.0
 
-[node name="Lantern2" type="OmniLight3D" parent="CSGCombiner3D/Building" unique_id=1042518191]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.642239, 3.480163, 15.923875)
+[node name="Torch2" type="OmniLight3D" parent="CSGCombiner3D/Building" unique_id=1042518191]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.642239, 3.480163, 7.569498)
 light_color = Color(0.8522109, 0.58098006, 0, 1)
 light_energy = 5.0
 light_indirect_energy = 5.0
