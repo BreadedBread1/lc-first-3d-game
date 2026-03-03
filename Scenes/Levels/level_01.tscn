@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dnwu8gavssjsw"]
 
+[ext_resource type="PackedScene" uid="uid://1wk2r4c4losh" path="res://Assets/dungeon_assets/props/torch_mounted.glb" id="1_66ail"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://Addons/proto_controller/proto_controller.tscn" id="1_l0dwn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_l0dwn"]
@@ -62,52 +63,54 @@ sides = 24
 
 [node name="Building" type="Node" parent="CSGCombiner3D" unique_id=676960500]
 
-[node name="BWall1" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=817998229]
+[node name="Walls" type="Node" parent="CSGCombiner3D/Building" unique_id=481232457]
+
+[node name="BWall1" type="CSGBox3D" parent="CSGCombiner3D/Building/Walls" unique_id=817998229]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, 15)
 use_collision = true
 size = Vector3(20, 10, 1)
 
-[node name="BWall2" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=2003846459]
+[node name="BWall2" type="CSGBox3D" parent="CSGCombiner3D/Building/Walls" unique_id=2003846459]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 16, 0, 5.271)
 use_collision = true
 size = Vector3(20.5, 10, 1)
 
-[node name="Doorway" type="CSGBox3D" parent="CSGCombiner3D/Building/BWall2" unique_id=1899966635]
+[node name="Doorway" type="CSGBox3D" parent="CSGCombiner3D/Building/Walls/BWall2" unique_id=1899966635]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0.2709999)
 operation = 2
 size = Vector3(2, 6, 2)
 
-[node name="Window1" type="CSGBox3D" parent="CSGCombiner3D/Building/BWall2" unique_id=1248482232]
+[node name="Window1" type="CSGBox3D" parent="CSGCombiner3D/Building/Walls/BWall2" unique_id=1248482232]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2.4368992, 0)
 operation = 2
 size = Vector3(2.5, 2, 1.5)
 
-[node name="Window2" type="CSGBox3D" parent="CSGCombiner3D/Building/BWall2" unique_id=1541043750]
+[node name="Window2" type="CSGBox3D" parent="CSGCombiner3D/Building/Walls/BWall2" unique_id=1541043750]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9999995, 2.4368992, 0)
 operation = 2
 size = Vector3(2.5, 2, 1.5)
 
-[node name="BWall3" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=389909914]
+[node name="BWall3" type="CSGBox3D" parent="CSGCombiner3D/Building/Walls" unique_id=389909914]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.958427, 0, -4.4746556)
 use_collision = true
 size = Vector3(20, 10, 1)
 
-[node name="BWall4" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=842585571]
+[node name="BWall4" type="CSGBox3D" parent="CSGCombiner3D/Building/Walls" unique_id=842585571]
 transform = Transform3D(0.9659258, -0.25881904, 0, 0.25881904, 0.9659258, 0, 0, 0, 1, 26.958427, 3, -4.4746556)
 use_collision = true
 size = Vector3(20, 10, 1)
 
-[node name="BWall5" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=791923667]
+[node name="BWall5" type="CSGBox3D" parent="CSGCombiner3D/Building/Walls" unique_id=791923667]
 transform = Transform3D(0.9659258, -0.25881904, 0, 0.25881904, 0.9659258, 0, 0, 0, 1, 26.958, 3, 15)
 use_collision = true
 size = Vector3(20, 10, 1)
 
-[node name="BCeiling" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=406614302]
+[node name="BCeiling" type="CSGBox3D" parent="CSGCombiner3D/Building/Walls" unique_id=406614302]
 transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, 26.772705, 6, 5)
 use_collision = true
 size = Vector3(20, 13.557129, 1)
 
-[node name="BRoof" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=470524879]
+[node name="BRoof" type="CSGBox3D" parent="CSGCombiner3D/Building/Walls" unique_id=470524879]
 transform = Transform3D(-1.1313336e-08, 0.9659258, 0.25881898, 4.222196e-08, 0.25881898, -0.9659258, -1, 0, -4.371139e-08, 24.390032, 7.1875596, 5.271)
 use_collision = true
 size = Vector3(22, 20.823242, 1)
@@ -155,21 +158,27 @@ light_indirect_energy = 5.0
 shadow_enabled = true
 omni_range = 4.0
 
-[node name="Torch1" type="OmniLight3D" parent="CSGCombiner3D/Building" unique_id=206256854]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.642239, 3.480163, 2.929863)
-light_color = Color(0.8522109, 0.58098006, 0, 1)
-light_energy = 5.0
-light_indirect_energy = 5.0
-shadow_enabled = true
-omni_range = 4.0
+[node name="Torch1" parent="CSGCombiner3D/Building" unique_id=185562497 instance=ExtResource("1_66ail")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15.524044, 1.9322476, 2.9248133)
 
-[node name="Torch2" type="OmniLight3D" parent="CSGCombiner3D/Building" unique_id=1042518191]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.642239, 3.480163, 7.569498)
+[node name="TorchLight1" type="OmniLight3D" parent="CSGCombiner3D/Building/Torch1" unique_id=206256854]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0050497055, 0.6507044, 0.33422375)
 light_color = Color(0.8522109, 0.58098006, 0, 1)
 light_energy = 5.0
 light_indirect_energy = 5.0
+light_size = 1.0
 shadow_enabled = true
-omni_range = 4.0
+
+[node name="Torch2" parent="CSGCombiner3D/Building" unique_id=629263984 instance=ExtResource("1_66ail")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15.524044, 1.9322476, 7.809408)
+
+[node name="TorchLight2" type="OmniLight3D" parent="CSGCombiner3D/Building/Torch2" unique_id=2000611882]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0050497055, 0.6507044, 0.33422375)
+light_color = Color(0.8522109, 0.58098006, 0, 1)
+light_energy = 5.0
+light_indirect_energy = 5.0
+light_size = 1.0
+shadow_enabled = true
 
 [node name="Turrets" type="Node" parent="CSGCombiner3D" unique_id=1804381612]
 
