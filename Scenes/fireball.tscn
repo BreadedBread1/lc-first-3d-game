@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bp4coux3s317"]
+
+[sub_resource type="Curve" id="Curve_wi6of"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.17658731, 0.9022556), 0.0, 0.0, 0, 0, Vector2(0.7797619, 0.37687957), -1.4584506, -1.4584506, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_sf4mh"]
+curve = SubResource("Curve_wi6of")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_olwj8"]
+lifetime_randomness = 0.5
+emission_shape = 1
+emission_sphere_radius = 0.3
+direction = Vector3(0, 0, 0)
+spread = 180.0
+initial_velocity_min = 1.0
+initial_velocity_max = 5.0
+gravity = Vector3(0, -4, 0)
+scale_curve = SubResource("CurveTexture_sf4mh")
+
+[sub_resource type="SphereMesh" id="SphereMesh_wdani"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_toovh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wdani"]
+albedo_color = Color(0.30200383, 0.30200383, 0.30200383, 1)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wi6of"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_sf4mh"]
+sky_material = SubResource("ProceduralSkyMaterial_wi6of")
+
+[sub_resource type="Environment" id="Environment_olwj8"]
+background_mode = 2
+sky = SubResource("Sky_sf4mh")
+tonemap_mode = 2
+ssao_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+
+[node name="Node3D" type="Node3D" unique_id=481378311]
+
+[node name="Smoke" type="GPUParticles3D" parent="." unique_id=628761927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1, 0)
+explosiveness = 0.9
+process_material = SubResource("ParticleProcessMaterial_olwj8")
+draw_pass_1 = SubResource("SphereMesh_wdani")
+
+[node name="Fire" type="GPUParticles3D" parent="." unique_id=2052627321]
+draw_pass_1 = SubResource("SphereMesh_toovh")
+
+[node name="CollisionShape3D" type="CSGBox3D" parent="." unique_id=1033475927]
+size = Vector3(100, 1, 100)
+material = SubResource("StandardMaterial3D_wdani")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1698288087]
+environment = SubResource("Environment_olwj8")

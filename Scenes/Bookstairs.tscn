@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dvink77o54nec"]
+
+[ext_resource type="PackedScene" uid="uid://br25qibomvaxv" path="res://Assets/custom_assets/Bookstairs.blend" id="1_d44hc"]
+[ext_resource type="Material" uid="uid://b72lfm33f2iud" path="res://Assets/dungeon_assets/dungeon_mat.tres" id="2_6o7qg"]
+
+[node name="Bookstairs" type="Node3D" unique_id=748891640]
+
+[node name="bookstairs" parent="." unique_id=1217647870 instance=ExtResource("1_d44hc")]
+
+[node name="Cube" parent="bookstairs" index="0" unique_id=466361597]
+material_override = ExtResource("2_6o7qg")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=663984821]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9499999, 0, -5.9604645e-08)
+visible = false
+use_collision = true
+size = Vector3(2.1000001, 4, 3.2)
+
+[editable path="bookstairs"]

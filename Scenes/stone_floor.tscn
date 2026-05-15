@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://d1ljj45sni8yr"]
+
+[ext_resource type="PackedScene" uid="uid://ecil1q5n6ygp" path="res://Assets/dungeon_assets/building/floor_stone.glb" id="1_t0ej5"]
+
+[node name="Stone Floor" type="Node3D" unique_id=1583822025]
+
+[node name="floor_stone" parent="." unique_id=41261868 instance=ExtResource("1_t0ej5")]
+
+[node name="floor_stone2" parent="." unique_id=1457179572 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="floor_stone3" parent="." unique_id=716864546 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="floor_stone4" parent="." unique_id=2080901843 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+
+[node name="floor_stone5" parent="." unique_id=590319316 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+
+[node name="floor_stone6" parent="." unique_id=2014357231 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="floor_stone7" parent="." unique_id=399032401 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="floor_stone8" parent="." unique_id=2023847923 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="floor_stone9" parent="." unique_id=451346151 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 4)
+
+[node name="floor_stone10" parent="." unique_id=1079568298 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 4)
+
+[node name="floor_stone11" parent="." unique_id=1564118769 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="floor_stone12" parent="." unique_id=1754529502 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="floor_stone13" parent="." unique_id=1157140974 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="floor_stone14" parent="." unique_id=1025588507 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -4)
+
+[node name="floor_stone15" parent="." unique_id=45754502 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -4)
+
+[node name="floor_stone16" parent="." unique_id=1153262200 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="floor_stone17" parent="." unique_id=1598943588 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -8)
+
+[node name="floor_stone18" parent="." unique_id=1450960475 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+
+[node name="floor_stone19" parent="." unique_id=1266582966 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -8)
+
+[node name="floor_stone20" parent="." unique_id=1348192563 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -8)
+
+[node name="floor_stone21" parent="." unique_id=2081004608 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
+
+[node name="floor_stone22" parent="." unique_id=693719120 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 8)
+
+[node name="floor_stone23" parent="." unique_id=603795834 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 8)
+
+[node name="floor_stone24" parent="." unique_id=1318357590 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 8)
+
+[node name="floor_stone25" parent="." unique_id=793934507 instance=ExtResource("1_t0ej5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 8)

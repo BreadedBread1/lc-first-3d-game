@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://cne4rb3867m1j"]
+
+[ext_resource type="PackedScene" uid="uid://bedo28ml6rt2q" path="res://Assets/dungeon_assets/building/ceiling.glb" id="1_krcub"]
+
+[node name="Ceiling" type="Node3D" unique_id=1476657560]
+
+[node name="ceiling" parent="." unique_id=464234859 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 5, -2.7)
+
+[node name="ceiling2" parent="." unique_id=385987872 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 5, 1.3)
+
+[node name="ceiling3" parent="." unique_id=1490874265 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 5, 5.3)
+
+[node name="ceiling4" parent="." unique_id=550098564 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 5, 9.3)
+
+[node name="ceiling5" parent="." unique_id=1469196959 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 5, 13.3)
+
+[node name="ceiling6" parent="." unique_id=384584161 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 5, -2.7)
+
+[node name="ceiling7" parent="." unique_id=1899250260 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 5, 1.3)
+
+[node name="ceiling8" parent="." unique_id=1213421173 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 5, 5.3)
+
+[node name="ceiling9" parent="." unique_id=1352721854 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 5, 9.3)
+
+[node name="ceiling10" parent="." unique_id=1336154451 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 5, 13.3)
+
+[node name="ceiling11" parent="." unique_id=193811160 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 5, -2.7)
+
+[node name="ceiling12" parent="." unique_id=1735499336 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 5, 1.3)
+
+[node name="ceiling13" parent="." unique_id=539723537 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 5, 5.3)
+
+[node name="ceiling14" parent="." unique_id=977550023 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 5, 9.3)
+
+[node name="ceiling15" parent="." unique_id=1890242598 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 5, 13.3)
+
+[node name="ceiling16" parent="." unique_id=1158945587 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 5, -2.7)
+
+[node name="ceiling17" parent="." unique_id=1563614930 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 5, 1.3)
+
+[node name="ceiling18" parent="." unique_id=1797956336 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 5, 5.3)
+
+[node name="ceiling19" parent="." unique_id=1356125110 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 5, 9.3)
+
+[node name="ceiling20" parent="." unique_id=1476982078 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 5, 13.3)
+
+[node name="ceiling21" parent="." unique_id=1675814775 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 5, -2.7)
+
+[node name="ceiling22" parent="." unique_id=1697085130 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 5, 1.3)
+
+[node name="ceiling23" parent="." unique_id=318515506 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 5, 5.3)
+
+[node name="ceiling24" parent="." unique_id=1635465776 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 5, 9.3)
+
+[node name="ceiling25" parent="." unique_id=951700010 instance=ExtResource("1_krcub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 5, 13.3)

@@ -1,6 +1,10 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://b72lfm33f2iud"]
 
-[ext_resource type="Texture2D" uid="uid://bix2b23u5o487" path="res://Assets/dungeon_assets/dungeon_albedo.png" id="1_34h1j"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8wbr4"]
+load_path = "res://.godot/imported/dungeon_albedo.png-65d5048a34c03350072e44f7b7ef644c.s3tc.ctex"
 
 [resource]
-albedo_texture = ExtResource("1_34h1j")
+diffuse_mode = 2
+albedo_texture = SubResource("CompressedTexture2D_8wbr4")
+uv1_triplanar_sharpness = 150.0
+stencil_flags = 2

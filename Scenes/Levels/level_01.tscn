@@ -1,7 +1,30 @@
 [gd_scene format=3 uid="uid://dnwu8gavssjsw"]
 
 [ext_resource type="PackedScene" uid="uid://1wk2r4c4losh" path="res://Assets/dungeon_assets/props/torch_mounted.glb" id="1_66ail"]
+[ext_resource type="PackedScene" uid="uid://cbl13xchx0ikb" path="res://Assets/dungeon_assets/building/wall_doorway.glb" id="1_j0t0u"]
+[ext_resource type="PackedScene" uid="uid://cne4rb3867m1j" path="res://Scenes/BCeiling.tscn" id="1_j5tiy"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://Addons/proto_controller/proto_controller.tscn" id="1_l0dwn"]
+[ext_resource type="PackedScene" uid="uid://bibjqbyswbmpn" path="res://Assets/dungeon_assets/props/table_medium.glb" id="1_taws2"]
+[ext_resource type="PackedScene" uid="uid://c1gx7rsatbfhm" path="res://Assets/dungeon_assets/building/wall_cracked.glb" id="2_7j1n4"]
+[ext_resource type="PackedScene" uid="uid://dlockdt0e0mdh" path="res://Assets/dungeon_assets/props/chair.glb" id="2_mb1if"]
+[ext_resource type="PackedScene" uid="uid://c8c4punaw2lvg" path="res://Scenes/sheet_roof.tscn" id="2_qelns"]
+[ext_resource type="PackedScene" uid="uid://encdyyf4svaj" path="res://Assets/dungeon_assets/building/wall_archedwindow_gated.glb" id="3_l7iqe"]
+[ext_resource type="PackedScene" uid="uid://cxpwlgun5b7pa" path="res://Scenes/wood_floor.tscn" id="3_qelns"]
+[ext_resource type="PackedScene" uid="uid://ddv307nepyax1" path="res://Assets/dungeon_assets/props/candles.glb" id="4_j5tiy"]
+[ext_resource type="PackedScene" uid="uid://dvink77o54nec" path="res://Scenes/Bookstairs.tscn" id="6_bmcj7"]
+[ext_resource type="PackedScene" uid="uid://bcqdvdgvhxpg1" path="res://Assets/dungeon_assets/building/wall_corner.glb" id="7_bn014"]
+[ext_resource type="PackedScene" uid="uid://crvxwrw5tq3ks" path="res://Assets/dungeon_assets/building/wall_tsplit.glb" id="8_00gvn"]
+[ext_resource type="PackedScene" uid="uid://cipbt8nyv4653" path="res://Scenes/crates_stacked.tscn" id="8_j0t0u"]
+[ext_resource type="PackedScene" uid="uid://dq2dhv3736vk5" path="res://Assets/dungeon_assets/building/wall_shelved.glb" id="9_4xlpl"]
+[ext_resource type="PackedScene" uid="uid://bvo166x7eda57" path="res://Assets/dungeon_assets/building/wall_arched.glb" id="10_tfrt2"]
+[ext_resource type="PackedScene" uid="uid://dvcs6wxargmvi" path="res://Assets/dungeon_assets/building/wall.glb" id="11_y1a27"]
+[ext_resource type="PackedScene" uid="uid://cmc6ksjbjjf6y" path="res://Assets/dungeon_assets/building/wall_window_closed.glb" id="12_0csu2"]
+[ext_resource type="PackedScene" uid="uid://dqpf86fg4wvwv" path="res://Assets/dungeon_assets/props/banner_mounted.glb" id="17_l7iqe"]
+[ext_resource type="PackedScene" uid="uid://cm8kgsmsw444x" path="res://Assets/dungeon_assets/props/keyring.glb" id="20_y1a27"]
+[ext_resource type="PackedScene" uid="uid://ca81ftfsastgh" path="res://Assets/dungeon_assets/props/sword_shield.glb" id="21_0csu2"]
+[ext_resource type="PackedScene" uid="uid://beqmmaews64ik" path="res://Assets/dungeon_assets/props/plate_food.glb" id="22_clbrb"]
+[ext_resource type="PackedScene" uid="uid://cactjt422k8aa" path="res://Assets/dungeon_assets/props/coin_stack.glb" id="23_6kgcr"]
+[ext_resource type="PackedScene" uid="uid://b23hb0rhlls86" path="res://Assets/dungeon_assets/props/keg_decorated.glb" id="25_y1a27"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_l0dwn"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -63,105 +86,198 @@ sides = 24
 
 [node name="Building" type="Node" parent="CSGCombiner3D" unique_id=676960500]
 
-[node name="Walls" type="Node" parent="CSGCombiner3D/Building" unique_id=481232457]
+[node name="Structure" type="Node" parent="CSGCombiner3D/Building" unique_id=481232457]
 
-[node name="BWall1" type="CSGBox3D" parent="CSGCombiner3D/Building/Walls" unique_id=817998229]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, 15)
-use_collision = true
-size = Vector3(20, 10, 1)
+[node name="wall_doorway2" parent="CSGCombiner3D/Building/Structure" unique_id=269428739 instance=ExtResource("1_j0t0u")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 15.35, 0, 5)
 
-[node name="BWall2" type="CSGBox3D" parent="CSGCombiner3D/Building/Walls" unique_id=2003846459]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 16, 0, 5.271)
-use_collision = true
-size = Vector3(20.5, 10, 1)
+[node name="wall_doorway" parent="CSGCombiner3D/Building/Structure/wall_doorway2" index="0" unique_id=1805617999]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.66893e-06, 0, 0)
 
-[node name="Doorway" type="CSGBox3D" parent="CSGCombiner3D/Building/Walls/BWall2" unique_id=1899966635]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0.2709999)
-operation = 2
-size = Vector3(2, 6, 2)
+[node name="wall_doorway_door" parent="CSGCombiner3D/Building/Structure/wall_doorway2/wall_doorway" index="0" unique_id=1014702950]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.8200989, 0, 0)
 
-[node name="Window1" type="CSGBox3D" parent="CSGCombiner3D/Building/Walls/BWall2" unique_id=1248482232]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2.4368992, 0)
-operation = 2
-size = Vector3(2.5, 2, 1.5)
+[node name="wall_cracked2" parent="CSGCombiner3D/Building/Structure" unique_id=1946553561 instance=ExtResource("2_7j1n4")]
+transform = Transform3D(-0.9192388, 0, -0.9192387, 0, 1.3, 0, 0.9192387, 0, -0.9192388, 25, 0, 13)
 
-[node name="Window2" type="CSGBox3D" parent="CSGCombiner3D/Building/Walls/BWall2" unique_id=1541043750]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9999995, 2.4368992, 0)
-operation = 2
-size = Vector3(2.5, 2, 1.5)
+[node name="wall_cracked3" parent="CSGCombiner3D/Building/Structure" unique_id=702844609 instance=ExtResource("2_7j1n4")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 25.400002, 0, 15)
 
-[node name="BWall3" type="CSGBox3D" parent="CSGCombiner3D/Building/Walls" unique_id=389909914]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.958427, 0, -4.4746556)
-use_collision = true
-size = Vector3(20, 10, 1)
+[node name="wall_archedwindow_gated2" parent="CSGCombiner3D/Building/Structure" unique_id=1098303721 instance=ExtResource("3_l7iqe")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 20, 0, -5)
 
-[node name="BWall4" type="CSGBox3D" parent="CSGCombiner3D/Building/Walls" unique_id=842585571]
-transform = Transform3D(0.9659258, -0.25881904, 0, 0.25881904, 0.9659258, 0, 0, 0, 1, 26.958427, 3, -4.4746556)
-use_collision = true
-size = Vector3(20, 10, 1)
+[node name="BCeiling" parent="CSGCombiner3D/Building/Structure" unique_id=847470823 instance=ExtResource("1_j5tiy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
 
-[node name="BWall5" type="CSGBox3D" parent="CSGCombiner3D/Building/Walls" unique_id=791923667]
-transform = Transform3D(0.9659258, -0.25881904, 0, 0.25881904, 0.9659258, 0, 0, 0, 1, 26.958, 3, 15)
-use_collision = true
-size = Vector3(20, 10, 1)
+[node name="SheetRoof" parent="CSGCombiner3D/Building/Structure" unique_id=1088369675 instance=ExtResource("2_qelns")]
+transform = Transform3D(-0.5, 0, 7.54979e-08, 0, 0.5, 0, -7.54979e-08, 0, -0.5, -27.5, 6.5, 9.4)
 
-[node name="BCeiling" type="CSGBox3D" parent="CSGCombiner3D/Building/Walls" unique_id=406614302]
-transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, 26.772705, 6, 5)
-use_collision = true
-size = Vector3(20, 13.557129, 1)
+[node name="WoodFloor" parent="CSGCombiner3D/Building/Structure" unique_id=2134374911 instance=ExtResource("3_qelns")]
 
-[node name="BRoof" type="CSGBox3D" parent="CSGCombiner3D/Building/Walls" unique_id=470524879]
-transform = Transform3D(-1.1313336e-08, 0.9659258, 0.25881898, 4.222196e-08, 0.25881898, -0.9659258, -1, 0, -4.371139e-08, 24.390032, 7.1875596, 5.271)
-use_collision = true
-size = Vector3(22, 20.823242, 1)
+[node name="wall_corner2" parent="CSGCombiner3D/Building/Structure" unique_id=1851686993 instance=ExtResource("7_bn014")]
+transform = Transform3D(-5.6824803e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.6824803e-08, 15.4, 0, -5)
 
-[node name="Table" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=1690835636]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0.6217003, 7)
+[node name="wall_corner3" parent="CSGCombiner3D/Building/Structure" unique_id=772277519 instance=ExtResource("7_bn014")]
+transform = Transform3D(-1.3, 0, -1.13649605e-07, 0, 1.3, 0, 1.13649605e-07, 0, -1.3, 15.4, 0, 15)
+
+[node name="wall_tsplit" parent="CSGCombiner3D/Building/Structure" unique_id=1931203185 instance=ExtResource("8_00gvn")]
+transform = Transform3D(-5.6824803e-08, 0, -1.3, 0, 1.3, 0, 1.3, 0, -5.6824803e-08, 33.3, 0, -5)
+
+[node name="wall_tsplit2" parent="CSGCombiner3D/Building/Structure" unique_id=1194202219 instance=ExtResource("8_00gvn")]
+transform = Transform3D(-5.6824803e-08, 0, -1.3, 0, 1.3, 0, 1.3, 0, -5.6824803e-08, 33.3, 0, -1.3)
+
+[node name="wall_tsplit3" parent="CSGCombiner3D/Building/Structure" unique_id=5047089 instance=ExtResource("8_00gvn")]
+transform = Transform3D(-5.6824803e-08, 0, -1.3, 0, 1.3, 0, 1.3, 0, -5.6824803e-08, 33.3, 0, 11.4)
+
+[node name="wall_tsplit4" parent="CSGCombiner3D/Building/Structure" unique_id=1805567319 instance=ExtResource("8_00gvn")]
+transform = Transform3D(-5.6824803e-08, 0, -1.3, 0, 1.3, 0, 1.3, 0, -5.6824803e-08, 33.3, 0, 14.999999)
+
+[node name="wall_shelved" parent="CSGCombiner3D/Building/Structure" unique_id=1381540431 instance=ExtResource("9_4xlpl")]
+transform = Transform3D(-5.6824803e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.6824803e-08, 15.35, 0, 9.8)
+
+[node name="wall_shelved2" parent="CSGCombiner3D/Building/Structure" unique_id=1779823588 instance=ExtResource("9_4xlpl")]
+transform = Transform3D(-1.3, 0, -1.13649605e-07, 0, 1.3, 0, 1.13649605e-07, 0, -1.3, 20.400002, 0, 15)
+
+[node name="wall_shelved3" parent="CSGCombiner3D/Building/Structure" unique_id=2080007824 instance=ExtResource("9_4xlpl")]
+transform = Transform3D(-1.3, 0, -1.13649605e-07, 0, 1.3, 0, 1.13649605e-07, 0, -1.3, 25.000002, 0, -5)
+
+[node name="wall_shelved4" parent="CSGCombiner3D/Building/Structure" unique_id=972292968 instance=ExtResource("9_4xlpl")]
+transform = Transform3D(-1.3, 0, -1.13649605e-07, 0, 1.3, 0, 1.13649605e-07, 0, -1.3, 28.900003, 0, -5)
+
+[node name="wall_shelved5" parent="CSGCombiner3D/Building/Structure" unique_id=1655977833 instance=ExtResource("9_4xlpl")]
+transform = Transform3D(1.7047441e-07, 0, -1.3, 0, 1.3, 0, 1.3, 0, 1.7047441e-07, 33.3, 0, 3.8999996)
+
+[node name="wall_arched2" parent="CSGCombiner3D/Building/Structure" unique_id=275498976 instance=ExtResource("10_tfrt2")]
+transform = Transform3D(0.91923875, 0, -0.9192388, 0, 1.3, 0, 0.9192388, 0, 0.91923875, 25, 0, -3)
+
+[node name="wall2" parent="CSGCombiner3D/Building/Structure" unique_id=188028671 instance=ExtResource("11_y1a27")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 29, 0, -1.3000001)
+
+[node name="wall3" parent="CSGCombiner3D/Building/Structure" unique_id=671311355 instance=ExtResource("11_y1a27")]
+transform = Transform3D(-5.6824803e-08, 0, -1.3, 0, 1.3, 0, 1.3, 0, -5.6824803e-08, 33.3, 0, 6.7)
+
+[node name="wall4" parent="CSGCombiner3D/Building/Structure" unique_id=575352842 instance=ExtResource("11_y1a27")]
+transform = Transform3D(-1.3, 0, 1.13649605e-07, 0, 1.3, 0, -1.13649605e-07, 0, -1.3, 28.999998, 0, 11.4)
+
+[node name="wall5" parent="CSGCombiner3D/Building/Structure" unique_id=48781083 instance=ExtResource("11_y1a27")]
+transform = Transform3D(-1.3, 0, 1.13649605e-07, 0, 1.3, 0, -1.13649605e-07, 0, -1.3, 28.999998, 0, 14.999999)
+
+[node name="wall_window_closed2" parent="CSGCombiner3D/Building/Structure" unique_id=2104635259 instance=ExtResource("12_0csu2")]
+transform = Transform3D(-5.6824803e-08, 0, -1.3, 0, 1.3, 0, 1.3, 0, -5.6824803e-08, 15.4, 0, 0)
+
+[node name="Tables" type="Node" parent="CSGCombiner3D/Building" unique_id=934692727]
+
+[node name="table_medium1" parent="CSGCombiner3D/Building/Tables" unique_id=582627781 instance=ExtResource("1_taws2")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 3, 28, 0, 7.042388)
+
+[node name="Table" type="CSGBox3D" parent="CSGCombiner3D/Building/Tables/table_medium1" unique_id=1690835636]
+transform = Transform3D(0.6666667, 0, 0, 0, 0.9034667, 0, 0, 0, 0.33333334, 0, 0.48113352, -0.014129162)
+visible = false
 use_collision = true
 size = Vector3(3, 1.1790771, 6)
 
-[node name="Table2" type="CSGCylinder3D" parent="CSGCombiner3D/Building" unique_id=1470433580]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0.32366562, 1)
-use_collision = true
-radius = 2.0
-height = 1.2329102
-sides = 16
+[node name="table_medium2" parent="CSGCombiner3D/Building/Tables" unique_id=481705804 instance=ExtResource("1_taws2")]
+transform = Transform3D(-1.5749999, 0, 0, 0, 1.6500001, 0, 0, 0, -1.5, 22, 0, 1)
 
-[node name="Bookshelf" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=757688329]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 28.729136, 2.058712, -3)
+[node name="Table2" type="CSGBox3D" parent="CSGCombiner3D/Building/Tables/table_medium2" unique_id=585725925]
+transform = Transform3D(-1.9682541, 0, 0, 0, 0.8484849, 0, 0, 0, -1.9333334, 0, 0.43858522, 0)
+visible = false
 use_collision = true
-size = Vector3(3, 1.3500977, 4.703003)
+size = Vector3(1, 1.2329102, 1)
 
-[node name="Bookshelf2" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=722517972]
-transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, 33, 2.0367393, 1.3104184)
+[node name="table_medium3" parent="CSGCombiner3D/Building/Tables" unique_id=552676503 instance=ExtResource("1_taws2")]
+transform = Transform3D(-0.7874999, 0, -1.2990382, 0, 1.6500003, 0, 1.3639901, 0, -0.74999994, 19.973366, 0, 9.953867)
+
+[node name="Table2" type="CSGBox3D" parent="CSGCombiner3D/Building/Tables/table_medium3" unique_id=1867632270]
+transform = Transform3D(-1.9682541, 0, 0, 0, 0.8484849, 0, 0, 0, -1.9333334, 0, 0.43858522, 0)
+visible = false
 use_collision = true
-size = Vector3(3, 1.3500977, 4.6590576)
+size = Vector3(1, 1.2329102, 1)
 
-[node name="Bookshelf3" type="CSGBox3D" parent="CSGCombiner3D/Building" unique_id=1706588180]
-transform = Transform3D(0.7071067, 0.7071068, 3.090862e-08, 0, -4.371139e-08, 1, 0.7071068, -0.7071067, -3.090862e-08, 32, 2.1373863, -2)
-use_collision = true
-size = Vector3(3, 1.3500977, 4.8603516)
+[node name="table_medium4" parent="CSGCombiner3D/Building/Tables" unique_id=695298134 instance=ExtResource("1_taws2")]
+transform = Transform3D(-3.934025e-08, 0, 1.5, 0, 1.5, 0, -0.9, 0, -6.556708e-08, 18, 0, -3.2)
 
-[node name="Candle" type="OmniLight3D" parent="CSGCombiner3D/Building" unique_id=240401690]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 1.7189987, 7)
+[node name="Chairs" type="Node" parent="CSGCombiner3D/Building" unique_id=1579645995]
+
+[node name="chair1" parent="CSGCombiner3D/Building/Chairs" unique_id=2053392090 instance=ExtResource("2_mb1if")]
+transform = Transform3D(1.4488887, 0, -0.38822854, 0, 1.4999999, 0, 0.38822854, 0, 1.4488887, 29.7, 0, 8)
+
+[node name="chair2" parent="CSGCombiner3D/Building/Chairs" unique_id=1873355291 instance=ExtResource("2_mb1if")]
+transform = Transform3D(-1.4095389, 0, 0.5130303, 0, 1.4999999, 0, -0.5130303, 0, -1.4095389, 25.6, 0, 6)
+
+[node name="chair3" parent="CSGCombiner3D/Building/Chairs" unique_id=912145226 instance=ExtResource("2_mb1if")]
+transform = Transform3D(-1.0606601, 0, -1.0606601, 0, 1.4999999, 0, 1.0606601, 0, -1.0606601, 25.699999, 0, 8.5)
+
+[node name="chair4" parent="CSGCombiner3D/Building/Chairs" unique_id=422430641 instance=ExtResource("2_mb1if")]
+transform = Transform3D(1.4488885, 0, 0.3882285, 0, 1.4999998, 0, -0.3882285, 0, 1.4488885, 23.699999, 0, 1.1)
+
+[node name="chair5" parent="CSGCombiner3D/Building/Chairs" unique_id=1426778391 instance=ExtResource("2_mb1if")]
+transform = Transform3D(-0.7499999, 0, -1.2990378, 0, 1.4999996, 0, 1.2990378, 0, -0.7499999, 21.699999, 0, 2.6999998)
+
+[node name="chair6" parent="CSGCombiner3D/Building/Chairs" unique_id=626503945 instance=ExtResource("2_mb1if")]
+transform = Transform3D(0.13073358, 0, 1.4942919, 0, 1.4999995, 0, -1.4942919, 0, 0.13073358, 22.4, 0, -0.5000002)
+
+[node name="chair7" parent="CSGCombiner3D/Building/Chairs" unique_id=195027761 instance=ExtResource("2_mb1if")]
+transform = Transform3D(-1.4942919, 0, -0.13073373, 0, 1.4999996, 0, 0.13073373, 0, -1.4942919, 20.4, 0, 0.99999976)
+
+[node name="chair8" parent="CSGCombiner3D/Building/Chairs" unique_id=225976272 instance=ExtResource("2_mb1if")]
+transform = Transform3D(0.38822845, 0, 1.4488885, 0, 1.4999996, 0, -1.4488885, 0, 0.38822845, 20.909967, 0, 8.531625)
+
+[node name="chair9" parent="CSGCombiner3D/Building/Chairs" unique_id=115228818 instance=ExtResource("2_mb1if")]
+transform = Transform3D(0.7499998, 0, -1.2990379, 0, 1.4999995, 0, 1.2990379, 0, 0.7499998, 21.295607, 0, 11.063675)
+
+[node name="chair10" parent="CSGCombiner3D/Building/Chairs" unique_id=205971189 instance=ExtResource("2_mb1if")]
+transform = Transform3D(-1.228728, 0, 0.8603645, 0, 1.4999995, 0, -0.8603645, 0, -1.228728, 18.874327, 0, 8.857457)
+
+[node name="chair11" parent="CSGCombiner3D/Building/Chairs" unique_id=1512428138 instance=ExtResource("2_mb1if")]
+transform = Transform3D(-0.6339271, 0, -1.3594615, 0, 1.4999995, 0, 1.3594615, 0, -0.6339271, 19.173365, 0, 11.339508)
+
+[node name="chair12" parent="CSGCombiner3D/Building/Chairs" unique_id=1958712182 instance=ExtResource("2_mb1if")]
+transform = Transform3D(1.4095386, 0, 0.5130303, 0, 1.4999995, 0, -0.5130303, 0, 1.4095386, 30.073364, 0, 5.339508)
+
+[node name="Extra" type="Node" parent="CSGCombiner3D/Building" unique_id=983553226]
+
+[node name="Candles1" parent="CSGCombiner3D/Building/Extra" unique_id=546387685 instance=ExtResource("4_j5tiy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.9, 1.5, 4.9)
+
+[node name="Candlelight" type="OmniLight3D" parent="CSGCombiner3D/Building/Extra/Candles1" unique_id=240401690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10000038, 0.9189985, 0.099999905)
 light_color = Color(0.8522109, 0.58098006, 0, 1)
 light_energy = 5.0
 light_indirect_energy = 5.0
 shadow_enabled = true
-omni_range = 4.0
+shadow_caster_mask = 4294967294
+omni_range = 100.0
+omni_attenuation = 1.5
 
-[node name="Candle2" type="OmniLight3D" parent="CSGCombiner3D/Building" unique_id=648565619]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 1.6789603, 1)
+[node name="Candles2" parent="CSGCombiner3D/Building/Extra" unique_id=1673665872 instance=ExtResource("4_j5tiy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.7, 1.6, 0.6)
+
+[node name="Candlelight2" type="OmniLight3D" parent="CSGCombiner3D/Building/Extra/Candles2" unique_id=648565619]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.87896025, 0.100000024)
 light_color = Color(0.8522109, 0.58098006, 0, 1)
 light_energy = 5.0
 light_indirect_energy = 5.0
 shadow_enabled = true
-omni_range = 4.0
+shadow_caster_mask = 4294967294
+omni_range = 7.0
 
-[node name="Torch1" parent="CSGCombiner3D/Building" unique_id=185562497 instance=ExtResource("1_66ail")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15.524044, 1.9322476, 2.9248133)
+[node name="Candles3" parent="CSGCombiner3D/Building/Extra" unique_id=1589239052 instance=ExtResource("4_j5tiy")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 20.073366, 1.6, 10.353867)
 
-[node name="TorchLight1" type="OmniLight3D" parent="CSGCombiner3D/Building/Torch1" unique_id=206256854]
+[node name="Candlelight3" type="OmniLight3D" parent="CSGCombiner3D/Building/Extra/Candles3" unique_id=608206803]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.87896025, 0.100000024)
+light_color = Color(0.8522109, 0.58098006, 0, 1)
+light_energy = 5.0
+light_indirect_energy = 5.0
+shadow_enabled = true
+shadow_caster_mask = 4294967294
+omni_range = 7.0
+
+[node name="Torch1" parent="CSGCombiner3D/Building/Extra" unique_id=185562497 instance=ExtResource("1_66ail")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15, 2.3, 2.3)
+
+[node name="TorchLight1" type="OmniLight3D" parent="CSGCombiner3D/Building/Extra/Torch1" unique_id=206256854]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0050497055, 0.6507044, 0.33422375)
 light_color = Color(0.8522109, 0.58098006, 0, 1)
 light_energy = 5.0
@@ -169,16 +285,49 @@ light_indirect_energy = 5.0
 light_size = 1.0
 shadow_enabled = true
 
-[node name="Torch2" parent="CSGCombiner3D/Building" unique_id=629263984 instance=ExtResource("1_66ail")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15.524044, 1.9322476, 7.809408)
+[node name="Torch2" parent="CSGCombiner3D/Building/Extra" unique_id=629263984 instance=ExtResource("1_66ail")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15, 2.3, 7.7)
 
-[node name="TorchLight2" type="OmniLight3D" parent="CSGCombiner3D/Building/Torch2" unique_id=2000611882]
+[node name="TorchLight2" type="OmniLight3D" parent="CSGCombiner3D/Building/Extra/Torch2" unique_id=2000611882]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0050497055, 0.6507044, 0.33422375)
 light_color = Color(0.8522109, 0.58098006, 0, 1)
 light_energy = 5.0
 light_indirect_energy = 5.0
 light_size = 1.0
 shadow_enabled = true
+
+[node name="banner_mounted" parent="CSGCombiner3D/Building/Extra" unique_id=1481031743 instance=ExtResource("17_l7iqe")]
+transform = Transform3D(-0.7071067, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, -0.7071067, 25.099998, 0.4, 12.6)
+
+[node name="Bookstairs1" parent="CSGCombiner3D/Building/Extra" unique_id=748891640 instance=ExtResource("6_bmcj7")]
+transform = Transform3D(-0.18117335, 0, -0.67614806, 0, 0.7, 0, 0.67614806, 0, -0.18117335, 26.8, 1.4000002, 0.49999994)
+
+[node name="Bookstairs2" parent="CSGCombiner3D/Building/Extra" unique_id=1913932212 instance=ExtResource("6_bmcj7")]
+transform = Transform3D(-0.061009068, 0, -0.69733626, 0, 0.7, 0, 0.69733626, 0, -0.061009068, 29.2, 1.4000002, 0.8)
+
+[node name="Bookstairs3" parent="CSGCombiner3D/Building/Extra" unique_id=1188158771 instance=ExtResource("6_bmcj7")]
+transform = Transform3D(-0.53623116, 0, -0.4499513, 0, 0.70000005, 0, 0.4499513, 0, -0.53623116, 31, 1.4000002, 1.8)
+
+[node name="keyring2" parent="CSGCombiner3D/Building/Extra" unique_id=120319261 instance=ExtResource("20_y1a27")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 23.2, 1.7, 0.8)
+
+[node name="sword_shield" parent="CSGCombiner3D/Building/Extra" unique_id=831974391 instance=ExtResource("21_0csu2")]
+transform = Transform3D(-5.68248e-08, 5.6824806e-08, -1.3, 5.6824803e-08, 1.3, 5.6824803e-08, 1.3, -5.68248e-08, -5.6824803e-08, 32.7, 2.6, 8.3)
+
+[node name="plate_food" parent="CSGCombiner3D/Building/Extra" unique_id=703990511 instance=ExtResource("22_clbrb")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 22, 1.7, 2.1)
+
+[node name="coin_stack" parent="CSGCombiner3D/Building/Extra" unique_id=1022283966 instance=ExtResource("23_6kgcr")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 21.2, 1.7, 0.3)
+
+[node name="coin_stack2" parent="CSGCombiner3D/Building/Extra" unique_id=1968905750 instance=ExtResource("23_6kgcr")]
+transform = Transform3D(-0.34641019, 0, -0.19999996, 0, 0.4, 0, 0.19999996, 0, -0.34641019, 21.6, 1.7, 0.10000001)
+
+[node name="coin_stack3" parent="CSGCombiner3D/Building/Extra" unique_id=956061326 instance=ExtResource("23_6kgcr")]
+transform = Transform3D(-0.28284267, 0, 0.28284273, 0, 0.39999998, 0, -0.28284273, 0, -0.28284267, 21.300001, 1.7, 0)
+
+[node name="Crates Stacked" parent="CSGCombiner3D/Building" unique_id=47785396 instance=ExtResource("8_j0t0u")]
+transform = Transform3D(-0.38822857, 0, 1.4488885, 0, 1.5000001, 0, -1.4488885, 0, -0.38822857, 25.100002, 0, -16.5)
 
 [node name="Turrets" type="Node" parent="CSGCombiner3D" unique_id=1804381612]
 
@@ -267,7 +416,7 @@ sides = 16
 cone = true
 
 [node name="ProtoController" parent="." unique_id=1455429052 instance=ExtResource("1_l0dwn")]
-transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0.11, -46)
+transform = Transform3D(-2, 0, -3.019916e-07, 0, 2, 0, 3.019916e-07, 0, -2, 0, 0.21000001, -46)
 look_speed = 0.003
 jump_velocity = 10.0
 sprint_speed = 12.0
@@ -277,3 +426,9 @@ input_forward = "move_forward"
 input_back = "move_back"
 input_jump = "jump"
 input_freefly = "fly"
+
+[node name="keg_decorated2" parent="." unique_id=1659313225 instance=ExtResource("25_y1a27")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 18, 1.5, -3.2)
+
+[editable path="CSGCombiner3D/Building/Structure/wall_doorway2"]
+[editable path="CSGCombiner3D/Building/Extra/sword_shield"]
